@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/loading_overlay">
+
+  <ProgressBar
+    android:id="@android:id/progress"
+    style="?attr/progressBarStyle"
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    android:layout_centerInParent="true"/>
+
+  <TextView
+    android:id="@+id/fixedtext"
+    android:layout_below="@android:id/progress"
+    android:layout_centerInParent="true"
+    style="@style/Widget.App.Loader.Primary.Normal"
+    android:layout_marginTop="@dimen/inset_normal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="@string/uikit_dialog_splash"/>
+
+  <TextView
+    style="@style/Widget.App.Loader.Primary"
+    android:id="@+id/diatext"
+    android:layout_below="@+id/fixedtext"
+    android:layout_centerInParent="true"
+    android:fontFamily="@font/medium_italic_font"
+    android:layout_marginTop="@dimen/inset_xsmall"
+    android:layout_width="wrap_content"
+    android:paddingLeft="@dimen/offset_xxxlarge"
+    android:paddingRight="@dimen/offset_xxxlarge"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    tools:ignore="MissingPrefix"/>
+</RelativeLayout>

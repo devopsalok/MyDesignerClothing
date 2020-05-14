@@ -1,0 +1,35 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion versions.coreAndroid.compileSdkVersion
+
+
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunnerArguments clearPackageData: 'true'
+        multiDexEnabled = true
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {}
+    }
+
+}
+
+dependencies {
+    api project(path: ':uikit')
+    api project(path: ':network')
+    api project(path: ':commons')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "androidx.appcompat:appcompat:$versions.androidX.appcompat"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.androidX.constraintlayout"
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:$versions.androidX.lifecycle"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.androidX.constraintlayout"
+}

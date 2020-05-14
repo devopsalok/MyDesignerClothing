@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:customcontrols="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".registration.RegistrationActivity">
+
+        <ImageView
+            android:id="@+id/img_sa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/my_dsc_logo"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/inset_large"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/img_sa">
+
+            <Button
+                android:id="@+id/register_btn"
+                style="?attr/buttonPrimary"
+                android:layout_width="300dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/inset_xlarge"
+                android:layout_marginBottom="@dimen/inset_xsmall"
+                android:onClick="@{(view) -> registrationActivityListener.onCreateAccountButtonClicked()}"
+                android:text="@string/create_account"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent" />
+
+            <TextView
+                android:id="@+id/register_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/inset_xsmall"
+                android:textAllCaps="false"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/text_small"
+                android:visibility="gone"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <com.mydesignerclothing.mobile.android.uikit.view.EditTextControl
+                android:id="@+id/email_address"
+                style="?attr/textDescriptionPrimaryInverse1x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/inset_xxxlarge"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/register_label"
+                customcontrols:editIMEOptions="5"
+                customcontrols:editInputType="textEmailAddress"
+                customcontrols:errorMessageLineHeight="2"
+                customcontrols:errorStyle="?attr/textErrorPrimaryBase"
+                customcontrols:errorText="@{createNewAccount.emailErrorText}"
+                customcontrols:hint="@string/hint_email"
+                customcontrols:maxLength="100"
+                customcontrols:singleLine="true"
+                customcontrols:state="@{createNewAccount.contactEmailState}"
+                customcontrols:text="@={createNewAccount.email}" />
+
+            <com.mydesignerclothing.mobile.android.uikit.view.EditTextControl
+                android:id="@+id/confirm_password"
+                style="?attr/textDescriptionPrimaryInverse1x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/inset_xsmall"
+                android:hint="@string/hint_confirm_password"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password"
+                customcontrols:editIMEOptions="5"
+                customcontrols:password="true"
+                customcontrols:editInputType="textPassword"
+                customcontrols:errorStyle="?attr/textErrorPrimaryBase"
+                customcontrols:errorText="@{createNewAccount.confirmPasswordStringText}"
+                customcontrols:hint="@string/hint_confirm_password"
+                customcontrols:maxLength="20"
+                customcontrols:singleLine="true"
+                customcontrols:state="@{createNewAccount.confirmPasswordState}"
+                customcontrols:text="@={createNewAccount.confirmPassword}" />
+
+
+            <com.mydesignerclothing.mobile.android.uikit.view.EditTextControl
+                android:id="@+id/first_name"
+                style="?attr/textDescriptionPrimaryInverse1x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/inset_xsmall"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/confirm_password"
+                customcontrols:editIMEOptions="5"
+                customcontrols:editInputType="1"
+                customcontrols:errorMessageLineHeight="2"
+                customcontrols:errorStyle="?attr/textErrorPrimaryBase"
+                customcontrols:errorText="@{createNewAccount.firstNameErrorText}"
+                customcontrols:hint="@string/hint_first_name"
+                customcontrols:maxLength="30"
+                customcontrols:singleLine="true"
+                customcontrols:state="@{createNewAccount.firstNameState}"
+                customcontrols:text="@={createNewAccount.firstName}" />
+
+            <com.mydesignerclothing.mobile.android.uikit.view.EditTextControl
+                android:id="@+id/last_name"
+                style="?attr/textDescriptionPrimaryInverse1x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/inset_xsmall"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/first_name"
+                customcontrols:editIMEOptions="5"
+                customcontrols:editInputType="1"
+                customcontrols:errorMessageLineHeight="2"
+                customcontrols:errorStyle="?attr/textErrorPrimaryBase"
+                customcontrols:errorText="@{createNewAccount.lastNameErrorText}"
+                customcontrols:hint="@string/hint_last_name"
+                customcontrols:maxLength="35"
+                customcontrols:singleLine="true"
+                customcontrols:state="@{createNewAccount.lastNameState}"
+                customcontrols:text="@={createNewAccount.lastName}" />
+
+            <com.mydesignerclothing.mobile.android.uikit.view.EditTextControl
+                android:id="@+id/phone"
+                style="?attr/textDescriptionPrimaryInverse1x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/inset_xsmall"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/last_name"
+                customcontrols:editIMEOptions="5"
+                customcontrols:editInputType="2"
+                customcontrols:errorMessageLineHeight="2"
+                customcontrols:errorStyle="?attr/textErrorPrimaryBase"
+                customcontrols:errorText="@string/contact_phone_error"
+                customcontrols:hint="@string/hint_phone"
+                customcontrols:maxLength="10"
+                customcontrols:state="@{createNewAccount.phoneNumberState}"
+                customcontrols:text="@={createNewAccount.phoneNumber}" />
+
+
+            <com.mydesignerclothing.mobile.android.uikit.view.EditTextControl
+                android:id="@+id/password"
+                style="?attr/textDescriptionPrimaryInverse1x"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/inset_xsmall"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/email_address"
+                customcontrols:editIMEOptions="5"
+                customcontrols:password="true"
+                customcontrols:editInputType="textPassword"
+                customcontrols:errorStyle="?attr/textErrorPrimaryBase"
+                customcontrols:errorText="@{createNewAccount.passwordErrorText}"
+                customcontrols:hint="@string/hint_password"
+                customcontrols:maxLength="20"
+                customcontrols:singleLine="true"
+                customcontrols:state="@{createNewAccount.passwordState}"
+                customcontrols:text="@={createNewAccount.password}" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <data>
+
+        <variable
+            name="createNewAccount"
+            type="com.mydesignerclothing.mobile.android.registration.viewmodel.RegistrationViewModel" />
+
+        <variable
+            name="registrationActivityListener"
+            type="com.mydesignerclothing.mobile.android.registration.view.RegistrationActivityListener" />
+
+    </data>
+
+</layout>

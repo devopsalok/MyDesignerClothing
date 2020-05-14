@@ -1,0 +1,35 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion versions.coreAndroid.compileSdkVersion
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+        multiDexEnabled = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {}
+    }
+}
+
+dependencies {
+    api fileTree(dir: 'prebuilt-libs', include: ['*.jar'])
+
+    api "com.github.akarnokd:rxjava2-extensions:$versions.rxJava.akarnokdExtension"
+    api "io.reactivex.rxjava2:rxjava:$versions.rxJava.rxJava2"
+    api "io.reactivex.rxjava2:rxandroid:$versions.rxJava.rxJava2Android"
+    api 'org.codehaus.jackson:jackson-core-asl:1.9.4'
+    api 'org.codehaus.jackson:jackson-mapper-asl:1.9.4'
+    api 'com.dynatrace.agent:agent-android:7.1.5.2263'
+    api "org.apache.commons:commons-lang3:$versions.apache.commonsLang3"
+    api("com.crashlytics.sdk.android:crashlytics:$versions.coreGoogle.crashlytics") {
+        transitive = true
+    }
+}

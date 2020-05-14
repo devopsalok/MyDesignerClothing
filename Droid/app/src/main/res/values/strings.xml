@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">MyDesignerClothing</string>
+    <string name="sign_up_title">Sign up</string>
+    <string name="home_title">Home</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_confirm_password">Confirm Password</string>
+    <string name="hint_first_name">First Name</string>
+    <string name="hint_last_name">Last Name</string>
+    <string name="hint_phone">Phone</string>
+    <string name="create_account">Create Account</string>
+    <string name="contact_phone_error">Please enter a valid telephone number</string>
+    <string name="please_enter_valid_password">Please enter a valid password</string>
+    <string name="contact_email_empty_error">Please enter an e-mail address </string>
+    <string name="contact_valid_email_error">Please enter a valid e-mail address</string>
+    <string name="add_passenger_empty_first_name_error">"Please enter the first name of passenger"</string>
+    <string name="add_passenger_empty_last_name_error">"Please enter the last name of passenger"</string>
+
+    <string name="invalid_first_name_error">"Please enter a valid first name."</string>
+    <string name="invalid_last_name_error">"Please enter a valid last name."</string>
+    <string name="password_empty_error">Please enter a password </string>
+    <string name="password_valid_error">Please enter a valid password </string>
+    <string name="confirm_password_empty_error">Please re-enter password </string>
+    <string name="re_enter_valid_confirm_password_error">Please re-enter a valid password</string>
+    <string name="password_do_not_match">The passwords entered do not match</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_shop">Shop</string>
+    <string name="menu_create">Create</string>
+    <string name="menu_basket">Basket</string>
+    <string name="menu_about">About</string>
+
+
+</resources>

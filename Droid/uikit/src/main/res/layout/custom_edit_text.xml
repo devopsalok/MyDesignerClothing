@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<com.mydesignerclothing.mobile.android.uikit.view.CustomEditText
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  style="?attr/editTextPrimaryNoBackground"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:ignore="MissingPrefix"
+  tools:text="FOO!">
+</com.mydesignerclothing.mobile.android.uikit.view.CustomEditText>

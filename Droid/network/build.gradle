@@ -1,0 +1,52 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion versions.coreAndroid.compileSdkVersion
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        multiDexEnabled = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles 'consumer-rules.pro'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {}
+    }
+
+}
+
+dependencies {
+    api "com.squareup.retrofit2:retrofit:$versions.networkSupport.retrofit2.retrofit"
+    implementation("com.squareup.retrofit2:converter-gson:$versions.networkSupport.retrofit2.gsonConverter") {
+        exclude group: 'com.google.code.gson', module: 'gson'
+    }
+
+    debugImplementation("com.github.jainsahab:Snooper-Okhttp:$versions.devTools.snooperVersion@aar") {
+        transitive = true
+        exclude group: 'com.squareup.okhttp3'
+    }
+    releaseImplementation("com.github.jainsahab:Snooper-Okhttp-No-Op:$versions.devTools.snooperVersion@aar") {
+        transitive = true
+        exclude group: 'com.squareup.okhttp3'
+    }
+    testImplementation("com.github.jainsahab:Snooper-Okhttp-No-Op:$versions.devTools.snooperVersion@aar") {
+        transitive = true
+        exclude group: 'com.squareup.okhttp3'
+    }
+    api "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$versions.networkSupport.retrofit2.rxJava2Adapter"
+    implementation "com.squareup.okhttp3:logging-interceptor:$versions.networkSupport.okHttp3.loggingInterceptor"
+    api "com.squareup.okhttp3:okhttp:$versions.networkSupport.okHttp3.okhttp"
+    api("com.squareup.retrofit2:converter-simplexml:$versions.networkSupport.retrofit2.simpleXmlConverter") {
+        exclude group: 'stax', module: 'stax-api'
+        exclude group: 'stax', module: 'stax'
+        exclude group: 'xpp3', module: 'xpp3'
+    }
+    api 'com.jakewharton:disklrucache:2.0.2'
+    testImplementation "org.apache.httpcomponents:httpclient:$versions.apache.httpclient"
+    api project(path: ':commons')
+}

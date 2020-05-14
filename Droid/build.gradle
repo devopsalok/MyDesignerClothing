@@ -1,0 +1,142 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    ext {
+        integrationTestCoverageEnabled = "true".equalsIgnoreCase(System.getProperty('integrationTestCoverageEnabled'))
+        buildForRelease = "true".equalsIgnoreCase(System.getProperty('buildForRelease'))
+    }
+    ext.versions = [
+            "coreAndroid": [
+                    "minSdkVersion"      : 21,
+                    "targetSdkVersion"   : 28,
+                    "compileSdkVersion"  : 28,
+                    "androidGradlePlugin": '3.6.2',
+                    "playServices"       : "4.3.2"
+            ],
+            "di"         : [
+                    "dagger": '2.25.2'
+            ],
+            "rxJava"     : [
+                    "akarnokdExtension": "0.20.10",  // check release notes of akarnokd extension of rx with rxJava2 to ensure they are in sync
+                    "rxJava2"          : '2.2.15',
+                    "rxJava2Android"   : "2.1.1"
+            ],
+            "androidX"   : [
+                    "annotation"      : '1.1.0',
+                    "appcompat"       : "1.1.0",
+                    "constraintlayout": "1.1.3",
+                    "percentlayout"   : "1.0.0",
+                    "material"        : "1.1.0",
+                    "multidex"        : '2.0.1',
+                    "recyclerview"    : '1.1.0',
+                    "cardview"        : "1.0.0",
+                    "espressoCore"    : "3.2.0",
+                    "espressoIntents" : "3.2.0",
+                    "espressoContrib" : "3.2.0",
+                    "espressoWeb"     : "3.2.0",
+                    "idlingConcurrent": "3.2.0",
+                    "idlingResource"  : "3.2.0",
+                    "testRunner"      : "1.2.0",
+                    "orchestrator"    : "1.2.0",
+                    "testRules"       : "1.2.0",
+                    "uiautomator"     : "2.2.0",
+                    "junitExt"        : "1.1.1",
+                    "biometric"       : "1.0.1",
+                    "lifecycle"       : "2.2.0"
+            ],
+            "networkSupport" : [
+                    "retrofit2": [
+                            "retrofit"          : "2.6.2",
+                            "gsonConverter"     : "2.6.2",
+                            "simpleXmlConverter": "2.6.2",
+                            "rxJava2Adapter"    : "1.0.0"
+                    ],
+                    "okHttp3"  : [
+                            "loggingInterceptor": "4.2.2",
+                            "okhttp"            : "4.2.2"
+                    ]
+            ],
+            "coreGoogle"     : [
+                    "firebase"   : [
+                            "appIndexing": '19.1.0',
+                            "messaging"  : '20.1.3'
+                    ],
+                    "gms"        : [
+                            "wearable": "17.0.0",
+                            "location": "17.0.0",
+                            "maps"    : "17.0.0"
+                    ],
+                    "crashlytics": "2.10.1"
+            ],
+            "apache"         : [
+                    "httpclient"  : '4.5.12',
+                    "commonsLang3": "3.9"
+            ],
+            "devTools"       : [
+                    "snooperVersion"      : '1.5.5',
+                    "keepItSafeDexCounter": "1.0.2"
+            ],
+            "testingTools"   : [
+                    "mockito"         : "3.3.3",
+                    "powerMock"       : "2.0.7",
+                    "linkedinDexMaker": "2.25.1",
+                    "robolectric"     : "4.3.1",
+                    "composer"        : "1.0.0-rc05"
+            ],
+            "dateTimeSdk"    : [
+                    "jodaTime"   : '2.10.3',  // check release notes between these to to make sure they are in sync with each other
+                    "jodaAndroid": "2.10.3"
+            ],
+            "localMavenHacks": [
+                    "locusLabs"  : "2.0.46",
+                    "wearSupport": "2.5.0"
+            ],
+            "deprecated"     : [
+                    "chunk": "3.5.0"
+            ]
+    ]
+
+    repositories {
+        gradlePluginPortal()
+        jcenter()
+        maven { url 'http://download.crashlytics.com/maven' }
+        maven { url "https://plugins.gradle.org/m2/" }
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        google()
+
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$versions.coreAndroid.androidGradlePlugin"
+        classpath 'com.google.gms:google-services:4.3.3'
+        classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.1"
+        classpath ("com.trevjonez.composer:plugin:$versions.testingTools.composer")
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        flatDir {
+            dirs '../prebuilt-libs', 'prebuilt-libs'
+            dirs project(':commons').files('prebuilt-libs')
+        }
+        maven { url 'https://repo1.maven.org/maven2' }
+        maven { url 'https://maven.fabric.io/public' }
+        maven { url "${locusLabsSdkRoot}/maven/releases" }
+        maven { url 'https://maven.google.com' }
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        mavenCentral()
+        jcenter()
+    }
+}
+
+apply from: 'infrastructure/gradle/android.global.gradle'
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

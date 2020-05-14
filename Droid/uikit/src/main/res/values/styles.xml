@@ -1,0 +1,65 @@
+<resources>
+
+    <style name="Widget.App.ActionBar"  parent="Base.Widget.App.ActionBar">
+        <item name="background">@color/action_bar_background</item>
+    </style>
+
+    <style name="Widget.App.ActionBar.WithNoHomeAsUp"  parent="Base.Widget.App.ActionBar.WithNoHomeAsUp">
+        <item name="background">@color/action_bar_background</item>
+    </style>
+
+    <style name="Base.Widget.App.ActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="displayOptions">showHome|showTitle|homeAsUp</item>
+    </style>
+
+    <style name="Base.Widget.App.ActionBar.WithNoHomeAsUp" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="displayOptions">showHome|showTitle</item>
+    </style>
+
+    <style name="App.PrimaryBackgroundNoLogo" parent="">
+        <item name="android:background">@drawable/background</item>
+        <item name="android:windowActionBar">false</item>
+    </style>
+
+    <style name="Widget.App.TextView.Primary.xSmall">
+        <item name="android:textSize">@dimen/text_xsmall</item>
+    </style>
+
+    <style name="Widget.App.TextView.Primary" parent="">
+        <item name="android:fontFamily">@font/default_font</item>
+        <item name="android:textColor">@color/primary_text</item>
+    </style>
+
+    <style name="Widget.App.TextView.ErrorLabel" parent="Widget.App.TextView.Primary.xSmall">
+        <item name="android:textColor">@color/label_text_error</item>
+    </style>
+
+    <style name="Widget.App.TextView.Label" parent="Widget.App.TextView.Primary.xSmall">
+        <item name="android:textColor">@color/label_text_default</item>
+    </style>
+
+    <style name="Widget.App.Loader" parent="">
+        <item name="android:fontFamily">@font/default_font</item>
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="Widget.App.Loader.Primary">
+        <item name="android:textColor">@color/primary_button_text_disabled</item>
+    </style>
+
+    <style name="Widget.App.Loader.Primary.Normal">
+        <item name="android:textSize">@dimen/text_normal</item>
+    </style>
+
+    <style name="Widget.App.TextView.Description.Inverse.Small">
+        <item name="android:textSize">@dimen/text_small</item>
+    </style>
+
+    <style name="Widget.App.TextView.Description.Inverse" parent="">
+        <item name="android:fontFamily">@font/default_font</item>
+        <item name="android:textSize">@dimen/text_xsmall</item>
+        <item name="android:textColor">@color/primary_description_text_inverse</item>
+        <item name="android:textColorLink">@color/action_bar_background</item>
+    </style>
+
+</resources>

@@ -1,0 +1,54 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion versions.coreAndroid.compileSdkVersion
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        multiDexEnabled = true
+        applicationId "com.mydesignerclothing.mobile.android"
+        vectorDrawables.useSupportLibrary = true
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunnerArguments clearPackageData: 'true'
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath false
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        jumboMode = true
+        javaMaxHeapSize "4g"
+    }
+
+}
+
+dependencies {
+    api project(path: ':login')
+    api project(path: ':uikit')
+    api project(path: ':network')
+    api project(path: ':commons')
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    debugImplementation("com.github.jainsahab:Snooper-Okhttp:$versions.devTools.snooperVersion@aar") {
+        transitive = true
+        exclude group: 'com.squareup.okhttp3'
+    }
+    implementation "androidx.annotation:annotation:$versions.androidX.annotation"
+    implementation "androidx.appcompat:appcompat:$versions.androidX.appcompat"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.androidX.constraintlayout"
+    implementation "androidx.lifecycle:lifecycle-runtime:$versions.androidX.lifecycle"
+    implementation "androidx.lifecycle:lifecycle-extensions:$versions.androidX.lifecycle"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$versions.androidX.lifecycle"
+    implementation "androidx.multidex:multidex:$versions.androidX.multidex"
+    api "com.google.android.material:material:$versions.androidX.material"
+}

@@ -1,0 +1,45 @@
+
+
+/*
+First, we populate data based on what is defined in GitLab.
+The runners have a set of pre-defined system variables:
+https://docs.gitlab.com/ee/ci/variables/predefined_variables.html
+For this, we go off of the CI_MERGE_REQUEST_TARGET_BRANCH_NAME
+We require that this must be either APPS_RELEASE or master
+This will result in feature branch merges not using the remote cache
+This is by design
+ */
+def gitLabRunnerTargetBranch = System.getenv().containsKey("CI_MERGE_REQUEST_TARGET_BRANCH_NAME") ? System.getenv("CI_MERGE_REQUEST_TARGET_BRANCH_NAME").toLowerCase() : ""
+def allowedGitLabRunnerBranches = ["master", "apps_release"]
+boolean isUsingGitLabRunnerHttpBuildCache = gitLabRunnerTargetBranch in allowedGitLabRunnerBranches
+
+/*
+Second possibility is the CI defining a variable for the gradle cache server
+If this value is persent, we assume this to be the fully qualified path
+By virtue of this variable being present, we will say that remote cache is enabled
+ */
+def environmentDefinedGradleCacheServer = System.getenv().containsKey("CI_GRADLE_CACHE_SERVER") ? System.getenv("CI_GRADLE_CACHE_SERVER") : "";
+boolean isUsingEnvironmentDefinedHttpBuildCache = !"".equalsIgnoreCase(environmentDefinedGradleCacheServer)
+
+/*
+If the environment variable is defined, we take that "as is"
+Otherwise we fallback to a hard coded path.
+The hard coded one is intended for use on the GitLab runners only
+ */
+def cacheServer = isUsingEnvironmentDefinedHttpBuildCache ? environmentDefinedGradleCacheServer : ""
+
+/*
+We say that push and remote cache are enabled if variables have been passed in for GitLab runners or CI usage
+ */
+boolean enableRemoteCache = isUsingEnvironmentDefinedHttpBuildCache || isUsingGitLabRunnerHttpBuildCache
+
+buildCache {
+    local {
+      enabled = !isUsingGitLabRunnerHttpBuildCache
+    }
+    remote(HttpBuildCache) {
+      url = cacheServer
+      push = enableRemoteCache
+      enabled = enableRemoteCache
+    }
+}
