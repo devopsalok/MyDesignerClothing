@@ -11,10 +11,32 @@
     <string name="hint_password">Password</string>
     <string name="forgot_password">Forgot Password</string>
     <string name="start_design">Start Design</string>
+    <string name="size">Size</string>
+    <string name="color">Color</string>
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+    <string name="take_picture">Take a picture</string>
+    <string name="choose_gallery">Choose Gallery</string>
+
+    <string name="print">Print</string>
+    <string name="embroidery">Embroidery</string>
+    <string name="add_image">Add Image</string>
+    <string name="edit_image">Edit Image</string>
+    <string name="ok">Ok</string>
+    <string name="upload_picker_title">Select Picture</string>
+    <string name="directory_create_fail">Failed to create directory</string>
 
     <string name="please_enter_valid_password">Please enter a valid password</string>
     <string name="email_empty_error">Please enter an e-mail address/name </string>
     <string name="valid_email_error">Please enter a valid e-mail address/name </string>
     <string name="password_empty_error">Please enter a password </string>
     <string name="password_valid_error">Please enter a valid password </string>
+
+    <string name="choose">Choose</string>
+    <string name="circle">Circle</string>
+    <string name="rectangle">Rectangle</string>
+    <string name="square">Square</string>
+    <string name="front">Front</string>
+    <string name="back">Back</string>
+    <string name="sleeves">Sleeve</string>
 </resources>

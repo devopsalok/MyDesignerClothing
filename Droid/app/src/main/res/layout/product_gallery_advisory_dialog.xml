@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/create_size_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/title">
+
+            <TextView
+                android:id="@+id/upload_label"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="center"
+                android:layout_margin="@dimen/inset_xsmall"
+                android:text="Uploaded image must be 300dpi"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Uploaded image must be 300dpi" />
+
+            <Button
+                android:id="@+id/ok_btn"
+                style="?attr/rectangleButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/inset_xsmall"
+                android:background="@color/primary_button_text_disabled"
+                android:text="@string/ok"
+                android:textAllCaps="false"
+                android:textColor="@color/action_bar_background" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/primary_button_default"
+            android:gravity="center"
+            android:padding="@dimen/offset_xsmall"
+            android:text="My Designer Clothing"
+            android:textColor="@color/primary_button_disabled"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="My Designer Clothing" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

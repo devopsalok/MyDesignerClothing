@@ -125,3 +125,4 @@
 -keep class org.simpleframework.xml.**{ *; }
 -keep class org.simpleframework.xml.core.**{ *; }
 -keep class org.simpleframework.xml.util.**{ *; }
+-keep class androidx.renderscript.** { *; }

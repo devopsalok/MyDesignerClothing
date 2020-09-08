@@ -1,0 +1,81 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:background="@color/transparent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.theartofdev.edmodo.cropper.CropImageView
+                android:id="@+id/circleImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cropAspectRatioX="5"
+                app:cropAspectRatioY="5"
+                app:cropShape="oval" />
+
+            <com.theartofdev.edmodo.cropper.CropImageView
+                android:id="@+id/rectangleImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cropShape="rectangle" />
+
+            <com.theartofdev.edmodo.cropper.CropImageView
+                android:id="@+id/squareImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cropAspectRatioX="1"
+                app:cropAspectRatioY="1" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/create_color_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <Button
+                android:id="@+id/cancel_btn"
+                style="?attr/rectangleButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginEnd="@dimen/inset_xxsmall"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/choose_btn"
+                style="?attr/rectangleButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/choose"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--  <data>
+
+          <variable
+              name="productDetailDialogViewModel"
+              type="com.mydesignerclothing.mobile.android.create.viewmodel.ProductDetailDialogViewModel" />
+      </data>-->
+
+
+</layout>

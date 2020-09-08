@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/passenger_control_selection_item"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/inset_normal"
+        android:layout_height="wrap_content">
+
+
+        <FrameLayout
+            android:id="@+id/right_end_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true">
+
+            <CheckBox
+                android:id="@+id/color_check_box_selected"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/primary_button_default"
+                android:backgroundTint="@color/primary_button_default"
+                android:layout_marginEnd="@dimen/inset_xxsmall">
+
+            </CheckBox>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/color_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inset_xxsmall"
+                android:ellipsize="end"
+                android:fontFamily="@font/bold_font"
+                android:singleLine="true"
+                android:text="@{productDetailColorViewModel.colorName}"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_large"
+                tools:ignore="MissingPrefix"
+                tools:text="@string/confirm" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <data>
+
+        <variable
+            name="productDetailColorViewModel"
+            type="com.mydesignerclothing.mobile.android.create.viewmodel.ProductDetailColorViewModel" />
+    </data>
+</layout>

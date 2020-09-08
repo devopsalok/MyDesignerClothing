@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/create_size_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/inset_large"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title">
+
+            <Button
+                android:id="@+id/take_picture_btn"
+                style="?attr/rectangleButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:background="@color/primary_button_text_disabled"
+                android:text="@string/take_picture"
+                android:textAllCaps="false"
+                android:textColor="@color/action_bar_background" />
+
+            <Button
+                android:id="@+id/choose_gallery_btn"
+                style="?attr/rectangleButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/inset_xsmall"
+                android:background="@color/primary_button_text_disabled"
+                android:text="@string/choose_gallery"
+                android:textAllCaps="false"
+                android:textColor="@color/action_bar_background" />
+
+            <Button
+                android:id="@+id/cancel_btn"
+                style="?attr/rectangleButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/inset_xsmall"
+                android:layout_weight="1"
+                android:background="@color/primary_button_text_disabled"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/action_bar_background" />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/primary_button_default"
+            android:gravity="center"
+            android:text="Choose an Option"
+            android:textColor="@color/primary_button_disabled"
+            android:textSize="@dimen/text_normal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Choose an Option" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <data>
+
+        <variable
+            name="productDetailSizeDialogViewModel"
+            type="com.mydesignerclothing.mobile.android.create.viewmodel.ProductDetailSizeDialogViewModel" />
+    </data>
+
+
+</layout>

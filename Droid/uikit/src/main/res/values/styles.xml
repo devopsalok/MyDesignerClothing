@@ -62,4 +62,60 @@
         <item name="android:textColorLink">@color/action_bar_background</item>
     </style>
 
+    <style name="Widget.App.Include.ProductDetail" parent="">
+        <item name="android:fontFamily">@font/default_font</item>
+        <item name="android:layout_marginEnd">@dimen/inset_large</item>
+        <item name="android:layout_marginStart">@dimen/inset_small</item>
+        <item name="android:layout_marginTop">@dimen/inset_xlarge</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Widget.App.Carousel.Primary" parent="">
+        <item name="android:fontFamily">@font/default_font</item>
+        <item name="android:layout_marginEnd">@dimen/inset_large</item>
+        <item name="android:layout_marginStart">@dimen/inset_large</item>
+        <item name="android:layout_marginTop">@dimen/inset_xlarge</item>
+        <item name="android:background">
+            @drawable/white_chicklet_bottom_rounded_corners_without_padding
+        </item>
+        <item name="android:paddingBottom">@dimen/offset_normal</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="Widget.App.ImageView.AddLogo" parent="">
+        <item name="android:fontFamily">@font/default_font</item>
+        <item name="android:layout_width">@dimen/add_promo_view_size</item>
+        <item name="android:layout_height">@dimen/add_promo_view_size</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginEnd">@dimen/inset_small</item>
+        <item name="android:layout_marginTop">@dimen/add_promo_view_inset_top</item>
+        <item name="android:src">@drawable/background</item>
+    </style>
+
+    <style name="Widget.App.ImageView.Voucher" parent="">
+        <item name="android:fontFamily">@font/default_font</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="Widget.App.ImageView.Checkout.Promo.Tint" parent="">
+        <item name="android:fontFamily">@font/default_font</item>
+        <item name="android:tint">@color/primary_button_disabled</item>
+    </style>
+
+    <style name="App.Dialog.FullScreen" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowMinWidthMajor">@dimen/full_screen_dialog_width</item>
+        <item name="android:windowMinWidthMinor">@dimen/full_screen_dialog_width</item>
+    </style>
+
+    <style name="EditText">
+        <item name="android:singleLine">true</item>
+        <item name="colorControlNormal">#FFFFFF</item>
+        <item name="colorControlActivated">#FFFFFF</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
 </resources>

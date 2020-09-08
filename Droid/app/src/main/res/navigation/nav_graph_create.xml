@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_create"
+    app:startDestination="@id/create_dest">
+
+    <fragment
+        android:id="@+id/create_dest"
+        android:name="com.mydesignerclothing.mobile.android.create.CreateFragment"
+        android:label="@string/menu_create"
+        tools:layout="@layout/fragment_create">
+        <action
+            android:id="@+id/action_shop_item"
+            app:destination="@id/create_products_dest" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/create_products_dest"
+        android:name="com.mydesignerclothing.mobile.android.create.CreateProductsFragment"
+        android:label="@string/menu_create"
+        app:popUpTo="@+id/create_dest">
+
+        <action
+            android:id="@+id/action_product_detail_item"
+            app:destination="@id/create_products_detail_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/create_products_detail_dest"
+        android:name="com.mydesignerclothing.mobile.android.create.ProductDetailFragment"
+        android:label="@string/menu_create">
+        <action
+            android:id="@+id/action_start_design"
+            app:destination="@id/start_design" />
+    </fragment>
+    <fragment
+        android:id="@+id/start_design"
+        android:name="com.mydesignerclothing.mobile.android.create.StartDesignFragment"
+        android:label="@string/menu_create">
+        <action
+            android:id="@+id/load_detail"
+            app:destination="@id/load_image" />
+    </fragment>
+    <fragment
+        android:id="@+id/load_image"
+        android:name="com.mydesignerclothing.mobile.android.create.LoadImageFragment"
+        android:label="@string/menu_create">
+        <action
+            android:id="@+id/choose_image_fragment"
+            app:destination="@id/choose_image" />
+
+        <action
+            android:id="@+id/select_crop_fragment"
+            app:destination="@id/select_crop" />
+    </fragment>
+    <fragment
+        android:id="@+id/choose_image"
+        android:name="com.mydesignerclothing.mobile.android.create.ChooseImageFragment"
+        android:label="@string/menu_create">
+        <action
+            android:id="@+id/action_load_image"
+            app:destination="@id/load_image" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/select_crop"
+        android:name="com.mydesignerclothing.mobile.android.create.SelectCropFragment"
+        android:label="@string/menu_create">
+        <action
+            android:id="@+id/action_crop"
+            app:destination="@id/crop_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/crop_fragment"
+        android:name="com.mydesignerclothing.mobile.android.create.CropFragment"
+        android:label="@string/menu_create">
+        <action
+            android:id="@+id/assign_position"
+            app:destination="@id/assign_position_fragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/assign_position_fragment"
+        android:name="com.mydesignerclothing.mobile.android.create.AssignPositionFragment"
+        android:label="@string/menu_create">
+        <!-- <action
+             android:id="@+id/action_crop"
+             app:destination="@id/load_image" />-->
+    </fragment>
+</navigation>

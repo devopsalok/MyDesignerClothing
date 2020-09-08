@@ -1,25 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="367cd16e-ac02-4937-9627-d1813c18b04d" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="367cd16e-ac02-4937-9627-d1813c18b04d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Droid/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Droid/app/src/main/java/com/mydesignerclothing/mobile/android/about/AboutUsDetailFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Droid/app/src/main/java/com/mydesignerclothing/mobile/android/home/HomeFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Droid/app/src/main/java/com/mydesignerclothing/mobile/android/shop/ShopFragment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Droid/app/src/main/res/layout/fragment_about_us_detail.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Droid/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Droid/app/src/main/res/layout/fragment_shop.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Droid/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Droid/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Droid/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Droid/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Droid/app/src/main/java/com/mydesignerclothing/mobile/android/NavigationActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/Droid/app/src/main/java/com/mydesignerclothing/mobile/android/navigation/NavigationActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Droid/app/src/main/java/com/mydesignerclothing/mobile/android/login/di/impl/LoginOutwardNavigatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Droid/app/src/main/java/com/mydesignerclothing/mobile/android/login/di/impl/LoginOutwardNavigatorImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Droid/app/src/main/res/layout/activity_navigation.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Droid/app/src/main/res/layout/activity_navigation.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Droid/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Droid/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Droid/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Droid/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Droid/uikit/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/Droid/uikit/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Droid/uikit/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Droid/uikit/src/main/res/values/colors.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Droid/uikit/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Droid/uikit/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1bLgi230GUvHifmuwyUslhsvJjb" />
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -33,5 +52,11 @@
       <updated>1588416911516</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1595422217325">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1595422217325" />
   </component>
 </project>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_about"
+    app:startDestination="@id/about_dest">
+
+    <fragment
+        android:id="@+id/about_dest"
+        android:name="com.mydesignerclothing.mobile.android.about.AboutFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about">
+        <action
+            android:id="@+id/action_detail_item"
+            app:destination="@id/about_detail_dest" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/about_detail_dest"
+        android:name="com.mydesignerclothing.mobile.android.about.AboutUsDetailFragment"
+        android:label="{title}"
+        app:popUpTo="@+id/about_dest">
+
+        <argument
+            android:name="title"
+            app:argType="string" />
+    </fragment>
+</navigation>

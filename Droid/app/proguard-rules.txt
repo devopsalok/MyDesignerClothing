@@ -219,3 +219,4 @@ public void handleSilentException(java.lang.Throwable);
 
 -keep public class * extends android.** { *; }
 -keep public class com.android.vending.licensing.ILicensingService
+-keep class androidx.renderscript.** { *; }

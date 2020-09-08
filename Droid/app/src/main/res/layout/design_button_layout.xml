@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="createFragmentListener"
+            type="com.mydesignerclothing.mobile.android.create.view.CreateInfoView" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/bottom_sheet_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <Button
+            android:id="@+id/start_design_btn"
+            style="?attr/buttonSecondary"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/inset_small"
+            android:layout_marginRight="@dimen/inset_small"
+            android:fadeScrollbars="false"
+            android:onClick="@{(view) -> createFragmentListener.onStartDesignButtonClicked()}"
+            android:overScrollMode="ifContentScrolls"
+            android:scrollbars="vertical"
+            android:text="@string/start_design"
+            android:textAllCaps="false" />
+    </FrameLayout>
+</layout>

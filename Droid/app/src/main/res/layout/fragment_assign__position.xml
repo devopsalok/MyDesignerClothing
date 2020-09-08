@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="?attr/actionBarSize"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg_product"
+            tools:context=".shop.ShopFragment">
+
+            <TextView
+                android:id="@+id/front_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inset_xxsmall"
+                android:ellipsize="end"
+                android:fontFamily="@font/bold_font"
+                android:singleLine="true"
+                android:text="@string/front"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingPrefix"
+                tools:text="@string/front" />
+
+            <TextView
+                android:id="@+id/back_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inset_xxsmall"
+                android:layout_marginTop="@dimen/inset_xsmall"
+                android:ellipsize="end"
+                android:fontFamily="@font/bold_font"
+                android:singleLine="true"
+                android:text="@string/back"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/front_position_recycler_view"
+                tools:ignore="MissingPrefix"
+                tools:text="@string/back" />
+
+            <TextView
+                android:id="@+id/sleeves_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inset_xxsmall"
+                android:layout_marginTop="@dimen/inset_xsmall"
+                android:ellipsize="end"
+                android:fontFamily="@font/bold_font"
+                android:singleLine="true"
+                android:text="@string/sleeves"
+                android:textColor="@color/primary_text"
+                android:textSize="@dimen/text_large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/back_position_recycler_view"
+                tools:ignore="MissingPrefix"
+                tools:text="@string/sleeves" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/back_position_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inset_xxsmall"
+                android:layout_marginTop="@dimen/inset_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/back_label" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/front_position_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inset_xxsmall"
+                android:layout_marginTop="@dimen/inset_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/front_label" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/sleeves_position_recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/inset_xxsmall"
+                android:layout_marginTop="@dimen/inset_small"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/sleeves_label" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

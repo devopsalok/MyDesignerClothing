@@ -7,6 +7,7 @@ android {
     defaultConfig {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
+        renderscriptSupportModeEnabled true
     }
 
     buildTypes {
@@ -23,7 +24,9 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     api "androidx.appcompat:appcompat:$versions.androidX.appcompat"
+    api "androidx.recyclerview:recyclerview:$versions.androidX.recyclerview"
     api 'com.android.volley:volley:1.1.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'

@@ -4,7 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
-import com.mydesignerclothing.mobile.android.NavigationActivity;
+import com.mydesignerclothing.mobile.android.navigation.NavigationActivity;
 import com.mydesignerclothing.mobile.android.login.di.contract.LoginOutwardNavigator;
 import com.mydesignerclothing.mobile.android.registration.RegistrationActivity;
 

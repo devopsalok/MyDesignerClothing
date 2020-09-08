@@ -3,6 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.mydesignerclothing.mobile.android">
 
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:name=".MyDesignerClothingApplication"
         android:allowBackup="false"
@@ -13,12 +23,13 @@
         android:roundIcon="@drawable/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.App"
-        tools:ignore="LockedOrientationActivity">
+        tools:ignore="LockedOrientationActivity"
+        tools:replace="android:allowBackup">
         <activity
-            android:name=".NavigationActivity"
+            android:name=".navigation.NavigationActivity"
             android:label="@string/home_title"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.App.BlueBackgroundNoLogo" />
+            android:theme="@style/Theme.App.NoActionBar" />
         <activity
             android:name=".registration.RegistrationActivity"
             android:label="@string/sign_up_title"
@@ -35,17 +46,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        
+
+        <activity
+            android:name=".PhotoEditorActivity"
+            android:configChanges="orientation|screenSize"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
+
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"/>
+
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
     </application>
-    <uses-feature
-        android:name="android.hardware.camera.autofocus"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
+
+
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

@@ -12,10 +12,16 @@
         <item name="android:windowContentOverlay">@null</item>
         <item name="buttonPrimary">@style/Widget.App.Button.Primary</item>
         <item name="buttonSecondary">@style/Widget.App.Button.Secondary</item>
+        <item name="rectangleButton">@style/Widget.App.Button.Rectangle</item>
         <item name="editTextPrimaryNoBackground">@null</item>
         <item name="textDetailsPrimaryBase">@style/Widget.App.TextView.Primary.xSmall</item>
         <item name="textErrorPrimaryBase">@style/Widget.App.TextView.ErrorLabel</item>
         <item name="textDescriptionPrimaryInverse1x">@style/Widget.App.TextView.Description.Inverse.Small</item>
+        <item name="includeProductDetailMargins">@style/Widget.App.Include.ProductDetail</item>
+        <item name="carouselPromo">@style/Widget.App.Carousel.Primary</item>
+        <item name="imageAddPromo">@style/Widget.App.ImageView.AddLogo</item>
+        <item name="imageVoucher">@style/Widget.App.ImageView.Voucher</item>
+        <item name="productDetailPromoImage">@style/Widget.App.ImageView.Checkout.Promo.Tint</item>
     </style>
 
     <style name="Theme.App.NoActionBar">
@@ -50,6 +56,11 @@
     <style name="Widget.App.Button.Secondary">
         <item name="android:textColor">@drawable/primary_button_text</item>
         <item name="android:background">@drawable/secondary_button</item>
+    </style>
+
+    <style name="Widget.App.Button.Rectangle">
+        <item name="android:textColor">@drawable/primary_button_text</item>
+        <item name="android:background">@drawable/rectangle_button</item>
     </style>
 
     <style name="Theme.App.Translucent">

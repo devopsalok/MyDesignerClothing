@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="?attr/actionBarSize">
+
+        <LinearLayout
+            android:id="@+id/create_color_button_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/product_image_view">
+
+            <Button
+                android:id="@+id/print_btn"
+                style="?attr/rectangleButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/print"
+                android:layout_marginEnd="@dimen/inset_xxsmall"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/embroidery_btn"
+                style="?attr/rectangleButton"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="@string/embroidery"
+                android:textAllCaps="false" />
+
+        </LinearLayout>
+
+        <com.mydesignerclothing.mobile.android.uikit.view.image.ImageFetcherView
+            android:id="@+id/product_image_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/create_color_button_container"
+            tools:src="@drawable/no_arrival_city_image" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <!--  <data>
+
+          <variable
+              name="productDetailDialogViewModel"
+              type="com.mydesignerclothing.mobile.android.create.viewmodel.ProductDetailDialogViewModel" />
+      </data>-->
+
+
+</layout>

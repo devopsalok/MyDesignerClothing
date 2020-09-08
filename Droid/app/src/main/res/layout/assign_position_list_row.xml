@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bg_product"
+        android:orientation="vertical">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.mydesignerclothing.mobile.android.uikit.view.image.ImageFetcherView
+                android:id="@+id/product_imageview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/no_arrival_city_image" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/position_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/inset_xxsmall"
+            android:layout_marginTop="@dimen/inset_xsmall"
+            android:maxLines="2"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/text_small"
+            tools:text="Roberto Duran Stone Hoodie (Navy)" />
+
+    </LinearLayout>
+
+    <!--<data>
+
+        <variable
+            name="productListViewModel"
+            type="com.mydesignerclothing.mobile.android.shop.viewmodel.ProductListAdapterViewModel" />
+    </data>-->
+</layout>

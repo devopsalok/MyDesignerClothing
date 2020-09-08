@@ -12,6 +12,21 @@
     <color name="primary_description_text_inverse">#000000</color>
     <color name="label_text_default">#666666</color>
     <color name="transparent">#90000000</color>
-    <color name="menu_bg">#FEFEFE</color>#A1A1A1
+    <color name="menu_bg">#FEFEFE</color>
     <color name="menu_icon_tint">#A1A1A1</color>
+    <color name="bg_product">#DCDCDC</color>
+    <color name="full_transparent">#00000000</color>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="blue_color_picker">#0066FF</color>
+    <color name="brown_color_picker">#AF593E</color>
+    <color name="green_color_picker">#01A368</color>
+    <color name="orange_color_picker">#FF861F</color>
+    <color name="red_color_picker">#ED0A3F</color>
+    <color name="red_orange_color_picker">#FF3F34</color>
+    <color name="sky_blue_color_picker">#76D7EA</color>
+    <color name="violet_color_picker">#8359A3</color>
+    <color name="yellow_color_picker">#FBE870</color>
+    <color name="yellow_green_color_picker">#C5E17A</color>
 </resources>

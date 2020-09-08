@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <dimen name="tab_space_top">4dp</dimen>
+  <dimen name="line_spacing">8dp</dimen>
+  <dimen name="line_spacing_medium">2dp</dimen>
+  <dimen name="button_margin_from_right">10dp</dimen>
+  <dimen name="layout_margin_from_top">21dp</dimen>
+  <dimen name="primary_bottom_margin">30dp</dimen>
+  <dimen name="module_spacing_18dp">18dp</dimen>
+  <dimen name="margin_spacing_medium">14dp</dimen>
+  <dimen name="chicklet_main_text_margin">20dp</dimen>
+  <dimen name="text_line_spacing">4sp</dimen>
+  <dimen name="toggle_radio_button_width">80dp</dimen>
+  <item name="full_screen_dialog_width" type="dimen">95%</item>
+
+  <!--chicklet dimensions-->
+  <dimen name="default_window_to_chicklet_spacing">15dp</dimen>
+
+  <dimen name="flight_status_button_width">109dp</dimen>
+  <dimen name="flight_watch_button_width">129dp</dimen>
+  <dimen name="flight_watch_button_height">47dp</dimen>
+  <dimen name="flight_search_result_itinerary_height">145dp</dimen>
+
+  <!-- umnr dimension -->
+  <dimen name="umnr_pin_box_height">64dp</dimen>
+
+  <!--Baggage Tracker-->
+  <dimen name="baggage_checked">60dp</dimen>
+  <dimen name="baggage_enroute">128dp</dimen>
+  <dimen name="baggage_delayed">128dp</dimen>
+  <dimen name="baggage_arrived">190dp</dimen>
+  <dimen name="baggage_map_polyline_width">4dp</dimen>
+  <dimen name="baggage_checked_end">120dp</dimen>
+  <dimen name="baggage_delayed_end">80dp</dimen>
+  <dimen name="baggage_enroute_end">80dp</dimen>
+  <dimen name="baggage_arrived_end">10dp</dimen>
+
+  <!-- Continuous Seat map -->
+  <dimen name="padding_seat_row">8dp</dimen>
+  <dimen name="margin_exit_row">16dp</dimen>
+  <dimen name="cabin_name_margin">10dp</dimen>
+  <dimen name="cabin_name_bottom_margin">30dp</dimen>
+  <dimen name="redesign_cabin_name_bottom_margin">20dp</dimen>
+  <dimen name="padding_seatmap_top">20dp</dimen>
+  <dimen name="redesign_padding_seatmap_top">10dp</dimen>
+  <dimen name="margin_seat_map">34dp</dimen>
+  <dimen name="seat_info_pop_up_text">12sp</dimen>
+  <dimen name="seat_width">28dp</dimen>
+  <dimen name="seat_height">28dp</dimen>
+  <dimen name="wing_width">34dp</dimen>
+  <dimen name="exit_row_width">32dp</dimen>
+  <dimen name="exit_row_height">32dp</dimen>
+  <dimen name="exit_row_margin">4dp</dimen>
+  <dimen name="cabin_bottom_margin">45dp</dimen>
+  <dimen name="redesign_cabin_bottom_margin">24dp</dimen>
+  <dimen name="padding_seatmap_bottom">135dp</dimen>
+  <dimen name="redesign_padding_seatmap_bottom">60dp</dimen>
+  <dimen name="amenity_height">24dp</dimen>
+  <dimen name="amenity_margin">6dp</dimen>
+  <dimen name="seat_margin">3dp</dimen>
+  <dimen name="upgrade_pricing_title">20sp</dimen>
+  <dimen name="upgrade_pricing_title_small">18sp</dimen>
+
+  <!-- Continuous Seat Map Passengers List -->
+
+  <dimen name="seat_number_width">34dp</dimen>
+  <dimen name="seat_number_height">34dp</dimen>
+  <dimen name="seat_number_text_size">13sp</dimen>
+  <dimen name="seat_number_margin_top_bottom">14dp</dimen>
+  <dimen name="seat_number_margin_left">20dp</dimen>
+  <dimen name="seat_number_margin_right">15dp</dimen>
+  <dimen name="passenger_name_text_size">19sp</dimen>
+  <dimen name="passenger_position_margin_left_right">10dp</dimen>
+  <dimen name="passenger_position_text_size">12sp</dimen>
+  <dimen name="passenger_arrow_margin_right">20dp</dimen>
+  <dimen name="next_flight_button_height">15sp</dimen>
+
+  <!-- Flight leg selector -->
+  <dimen name="leg_info_height">48dp</dimen>
+  <dimen name="leg_info_width">48dp</dimen>
+  <dimen name="flight_number_div_height">6dp</dimen>
+  <dimen name="flight_number_div_width">6dp</dimen>
+  <dimen name="flight_leg_div_height">1dp</dimen>
+  <dimen name="leg_summary_padding_start">16dp</dimen>
+  <dimen name="flight_leg_section_text_size">12sp</dimen>
+  <dimen name="flight_leg_section_padding">8dp</dimen>
+  <dimen name="flight_leg_summary_margin">20dp</dimen>
+  <dimen name="flight_leg_summary_top_margin">75dp</dimen>
+  <dimen name="flight_leg_summary_bottom_margin">65dp</dimen>
+
+  <!-- Checkin -->
+  <dimen name="toggle_special_item_width">75dp</dimen>
+  <dimen name="toggle_special_item_underline_top">48dp</dimen>
+  <dimen name="toggle_underline_height">5dp</dimen>
+  <dimen name="top_padding_8dp">8dp</dimen>
+  <dimen name="banner_view_pager_height">145dp</dimen>
+
+  <!-- Dialog -->
+  <dimen name="dialog_component_padding">16dp</dimen>
+
+  <!-- Notification -->
+  <dimen name="notification_buffer">10dp</dimen>
+  <dimen name="notification_message_text_spacing">5dp</dimen>
+  <dimen name="notification_icon_size">44dp</dimen>
+  <dimen name="notification_line_height">1dp</dimen>
+
+  <!-- Baggage -->
+  <dimen name="bag_type_grid_height">123dp</dimen>
+  <dimen name="bag_type_grid_width">158dp</dimen>
+  <dimen name="bag_type_image_height">78dp</dimen>
+  <dimen name="bag_selection_check_height">17dp</dimen>
+  <dimen name="bag_selection_check_width">22dp</dimen>
+  <dimen name="bag_type_selection_image_boxes_corner_radius">2dp</dimen>
+  <dimen name="bag_type_selection_image_boxes_padding">10dp</dimen>
+  <dimen name="bag_type_image_name_top_padding">3dp</dimen>
+  <dimen name="bag_type_selection_boxes_stroke_width">1dp</dimen>
+  <dimen name="bag_type_image_name_bottom_padding">1dp</dimen>
+  <dimen name="cl_guideline_width">1dp</dimen>
+
+  <!-- Reshop-->
+  <dimen name="reshop_credit_list_height">100dp</dimen>
+
+  <dimen name="image_loader_post_width">300dp</dimen>
+
+</resources>

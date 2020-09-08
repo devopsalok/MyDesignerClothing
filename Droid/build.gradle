@@ -5,6 +5,9 @@ buildscript {
     ext {
         integrationTestCoverageEnabled = "true".equalsIgnoreCase(System.getProperty('integrationTestCoverageEnabled'))
         buildForRelease = "true".equalsIgnoreCase(System.getProperty('buildForRelease'))
+        PUBLISH_GROUP_ID = 'com.theartofdev.edmodo'
+        PUBLISH_ARTIFACT_ID = 'android-image-cropper'
+        PUBLISH_VERSION = '2.8.0'
     }
     ext.versions = [
             "coreAndroid": [
@@ -43,7 +46,8 @@ buildscript {
                     "uiautomator"     : "2.2.0",
                     "junitExt"        : "1.1.1",
                     "biometric"       : "1.0.1",
-                    "lifecycle"       : "2.2.0"
+                    "lifecycle"       : "2.2.0",
+                    "navigation"      : "2.3.0-alpha06"
             ],
             "networkSupport" : [
                     "retrofit2": [
@@ -112,6 +116,8 @@ buildscript {
         classpath 'com.google.gms:google-services:4.3.3'
         classpath "org.sonarsource.scanner.gradle:sonarqube-gradle-plugin:2.6.1"
         classpath ("com.trevjonez.composer:plugin:$versions.testingTools.composer")
+        def nav_version = "2.3.0"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -130,6 +136,7 @@ allprojects {
         maven { url "${locusLabsSdkRoot}/maven/releases" }
         maven { url 'https://maven.google.com' }
         maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+        maven { url 'https://jitpack.io' }
         mavenCentral()
         jcenter()
     }

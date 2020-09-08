@@ -9,6 +9,7 @@ android {
         testInstrumentationRunnerArguments clearPackageData: 'true'
         multiDexEnabled = true
         consumerProguardFiles 'consumer-rules.pro'
+        renderscriptSupportModeEnabled true
     }
 
     buildTypes {

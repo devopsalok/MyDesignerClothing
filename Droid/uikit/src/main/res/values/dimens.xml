@@ -49,4 +49,26 @@
     <dimen name="offset_xsmall">8dp</dimen>
     <dimen name="offset_xxsmall">4dp</dimen>
     <dimen name="offset_null">0dp</dimen>
+
+    <!-- Standard set of View sizes -->
+    <dimen name="view_size_xxxxxxxxxlarge">261dp</dimen>
+    <dimen name="view_size_xxxxxxxxlarge">92dp</dimen>
+    <dimen name="view_size_xxxxxxxlarge">52dp</dimen>
+    <dimen name="view_size_xxxxxxlarge">48dp</dimen>
+    <dimen name="view_size_xxxxxlarge">44dp</dimen>
+    <dimen name="view_size_xxxxlarge">40dp</dimen>
+    <dimen name="view_size_xxxlarge">36dp</dimen>
+    <dimen name="view_size_xxlarge">32dp</dimen>
+    <dimen name="view_size_xlarge">28dp</dimen>
+    <dimen name="view_size_large">24dp</dimen>
+    <dimen name="view_size_normal">20dp</dimen>
+    <dimen name="view_size_small">16dp</dimen>
+    <dimen name="view_size_xsmall">12dp</dimen>
+    <dimen name="view_size_xxsmall">8dp</dimen>
+    <dimen name="view_size_xxxsmall">4dp</dimen>
+    <dimen name="view_size_null">0dp</dimen>
+
+
+    <dimen name="add_promo_view_size">47dp</dimen>
+    <dimen name="add_promo_view_inset_top">-26dp</dimen>
 </resources>

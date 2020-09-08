@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="createFragmentListener"
+            type="com.mydesignerclothing.mobile.android.create.view.CreateInfoView" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/coordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginBottom="?attr/actionBarSize">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/nested_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/inset_large"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constrainedHeight="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/product_detail_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/button_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/inset_normal"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/size_label">
+
+                        <Button
+                            android:id="@+id/size_btn"
+                            style="?attr/buttonSecondary"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="@dimen/inset_small"
+                            android:layout_marginRight="@dimen/inset_small"
+                            android:layout_weight="1"
+                            android:text="@string/size"
+                            android:onClick="@{(view) -> createFragmentListener.onSelectSizeButtonClicked()}"
+                            android:textAllCaps="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent" />
+
+                        <Button
+                            android:id="@+id/color_btn"
+                            style="?attr/buttonSecondary"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="@dimen/inset_small"
+                            android:layout_marginRight="@dimen/inset_small"
+                            android:layout_weight="1"
+                            android:text="@string/color"
+                            android:onClick="@{(view) -> createFragmentListener.onSelectColorButtonClicked()}"
+                            android:textAllCaps="false"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintLeft_toLeftOf="parent"
+                            app:layout_constraintRight_toRightOf="parent" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/about_this_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/inset_small"
+                        android:layout_marginTop="@dimen/inset_small"
+                        android:fontFamily="@font/bold_font"
+                        android:text="About This Item"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_normal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/button_layout"
+                        tools:ignore="MissingPrefix" />
+
+                    <TextView
+                        android:id="@+id/about_this_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/inset_small"
+                        android:layout_marginTop="@dimen/inset_small"
+                        android:fontFamily="@font/bold_font"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_normal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/about_this_label"
+                        tools:ignore="MissingPrefix" />
+
+                    <TextView
+                        android:id="@+id/description_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/inset_small"
+                        android:layout_marginTop="@dimen/inset_small"
+                        android:fontFamily="@font/bold_font"
+                        android:text="Description"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_normal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/about_this_text"
+                        tools:ignore="MissingPrefix" />
+
+                    <TextView
+                        android:id="@+id/description_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/inset_small"
+                        android:layout_marginTop="@dimen/inset_small"
+                        android:fontFamily="@font/default_font"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_normal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/description_label"
+                        tools:ignore="MissingPrefix" />
+
+                    <TextView
+                        android:id="@+id/size_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/inset_small"
+                        android:layout_marginTop="@dimen/inset_large"
+                        android:fontFamily="@font/bold_font"
+                        android:text="Select Size and Color"
+                        android:textColor="@color/primary_text"
+                        android:textSize="@dimen/text_normal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/product_detail_promo_view_flipper"
+                        tools:ignore="MissingPrefix" />
+
+                    <include
+                        android:id="@+id/product_detail_promo_view_flipper"
+                        style="?attr/includeProductDetailMargins"
+                        layout="@layout/product_detail_view_flipper" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.core.widget.NestedScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/bottom_sheet_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <Button
+                android:id="@+id/start_design_btn"
+                style="?attr/buttonSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/inset_small"
+                android:layout_marginRight="@dimen/inset_small"
+                android:fadeScrollbars="false"
+                android:onClick="@{(view) -> createFragmentListener.onStartDesignButtonClicked()}"
+                android:overScrollMode="ifContentScrolls"
+                android:scrollbars="vertical"
+                android:text="@string/start_design"
+                android:textAllCaps="false" />
+        </FrameLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

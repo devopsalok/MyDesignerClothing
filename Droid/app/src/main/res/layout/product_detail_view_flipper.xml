@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.mydesignerclothing.mobile.android.navigation.ProductDetailCarousel
+        android:id="@+id/detail_view_flipper_container"
+        style="?attr/carouselPromo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ViewFlipper
+            android:id="@+id/product_detail_view_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoStart="false" />
+
+        <com.mydesignerclothing.mobile.android.navigation.SegmentedRadioGroup
+            android:id="@+id/product_detail_page_view_control"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:clickable="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+        </com.mydesignerclothing.mobile.android.navigation.SegmentedRadioGroup>
+    </com.mydesignerclothing.mobile.android.navigation.ProductDetailCarousel>
+</layout>
