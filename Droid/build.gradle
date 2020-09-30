@@ -99,6 +99,7 @@ buildscript {
             "deprecated"     : [
                     "chunk": "3.5.0"
             ]
+
     ]
 
     repositories {

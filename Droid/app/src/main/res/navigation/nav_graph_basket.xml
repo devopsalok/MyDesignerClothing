@@ -9,5 +9,54 @@
         android:id="@+id/basket_dest"
         android:name="com.mydesignerclothing.mobile.android.basket.BasketFragment"
         android:label="@string/menu_basket"
-        tools:layout="@layout/fragment_basket"/>
+        tools:layout="@layout/fragment_basket">
+        <action
+            android:id="@+id/action_cart_item"
+            app:destination="@id/cart_dest" />
+        <action
+            android:id="@+id/action_basket_dest_to_basket_checkout"
+            app:destination="@id/basket_checkout" />
+    </fragment>
+    <fragment
+        android:id="@+id/cart_dest"
+        android:name="com.mydesignerclothing.mobile.android.shop.ShopFragment"
+        android:label="@string/menu_shop"
+        tools:layout="@layout/fragment_shop">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/basket_checkout"
+        android:name="com.mydesignerclothing.mobile.android.basket.CheckoutActivity"
+
+        tools:layout="@layout/activity_checkout">
+        <action
+            android:id="@+id/action_forward"
+            app:destination="@id/checkout_dest" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkout_dest"
+        android:name="com.mydesignerclothing.mobile.android.basket.ShippingMethodActivity"
+
+        tools:layout="@layout/activity_shipping_method">
+        <action
+            android:id="@+id/action_forward"
+            app:destination="@id/checkout_dest_ship" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/checkout_dest_ship"
+        android:name="com.mydesignerclothing.mobile.android.basket.FinalCheckoutFragment"
+
+        tools:layout="@layout/activity_final_checkout_fragment">
+       <!-- <action
+            android:id="@+id/action_forward"
+            app:destination="@id/ship_dest" />-->
+
+    </fragment>
+
+
 </navigation>

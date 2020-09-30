@@ -13,4 +13,6 @@ public class Constant {
   public static final String TOAST_MESSAGE = "TOAST_MESSAGE";
 
   public static final String LOGIN = "LOGIN";
+
+  public static String USERID="USERID";
 }

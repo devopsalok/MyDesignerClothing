@@ -57,6 +57,7 @@ public class ProductDetailColorDialogAdapter extends RecyclerView.Adapter<Produc
 
         if (row_index == position) {
             holder.checkBox.setChecked(true);
+            createInfoViewListener.invokeProductDetailEventForColorSelected(productColorsList.get(position));
         } else {
             holder.checkBox.setChecked(false);
         }

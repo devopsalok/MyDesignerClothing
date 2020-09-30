@@ -57,6 +57,7 @@ public class ProductDetailSizeDialogAdapter extends RecyclerView.Adapter<Product
 
         if (row_index == position) {
             holder.checkBox.setChecked(true);
+            createInfoViewListener.invokeProductDetailEventForSizeSelected(productColorsList.get(position));
         } else {
             holder.checkBox.setChecked(false);
         }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../MyDesignerClothing.iml" filepath="$PROJECT_DIR$/../MyDesignerClothing.iml" group="MyDesignerClothing" />
+      <module fileurl="file://$PROJECT_DIR$/app.iml" filepath="$PROJECT_DIR$/app.iml" group="MyDesignerClothing/app" />
+      <module fileurl="file://$PROJECT_DIR$/../commons/commons.iml" filepath="$PROJECT_DIR$/../commons/commons.iml" group="MyDesignerClothing/commons" />
+      <module fileurl="file://$PROJECT_DIR$/../cropper/cropper.iml" filepath="$PROJECT_DIR$/../cropper/cropper.iml" group="MyDesignerClothing/cropper" />
+      <module fileurl="file://$PROJECT_DIR$/../login/login.iml" filepath="$PROJECT_DIR$/../login/login.iml" group="MyDesignerClothing/login" />
+      <module fileurl="file://$PROJECT_DIR$/../network/network.iml" filepath="$PROJECT_DIR$/../network/network.iml" group="MyDesignerClothing/network" />
+      <module fileurl="file://$PROJECT_DIR$/../uikit/uikit.iml" filepath="$PROJECT_DIR$/../uikit/uikit.iml" group="MyDesignerClothing/uikit" />
+    </modules>
+  </component>
+</project>

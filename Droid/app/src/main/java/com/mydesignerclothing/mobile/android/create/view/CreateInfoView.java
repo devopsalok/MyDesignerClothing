@@ -36,6 +36,7 @@ public interface CreateInfoView {
     void invokeProductDetailEventForSizeSelected(ProductColorsList productColorsList);
 
     void onStartDesignButtonClicked();
+    void addToCart();
 
 
 }

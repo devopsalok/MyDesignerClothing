@@ -39,7 +39,7 @@ public class MyDesignerClothingApplication extends DaggerApplication implements 
     private static EnvironmentConfig environmentConfig;
 
     private static Context appContext;
-    private static MyDesignerClothingApplication applicationInstance;
+    public static MyDesignerClothingApplication applicationInstance;
     private WeakReference<Activity> activityRef;
 
     @Override
@@ -165,4 +165,5 @@ public class MyDesignerClothingApplication extends DaggerApplication implements 
     public LoginComponent getLoginComponent() {
         return appComponent.getLoginBindingInjection().getLoginComponent();
     }
+
 }

@@ -1,9 +1,11 @@
 package com.mydesignerclothing.mobile.android;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import java.util.Set;
 import java.util.TreeSet;
@@ -59,6 +61,7 @@ public class BaseFragment extends Fragment {
         }
     }
 
+    @SuppressLint("ResourceType")
     @Override
     public void onStart() {
         super.onStart();
@@ -67,6 +70,7 @@ public class BaseFragment extends Fragment {
         integerSet.add(R.id.shop_dest);
         integerSet.add(R.id.create_dest);
         integerSet.add(R.id.basket_dest);
+
         integerSet.add(R.id.about_dest);
         appBarConfig = new AppBarConfiguration.Builder(integerSet).build();
 
@@ -74,6 +78,12 @@ public class BaseFragment extends Fragment {
 
         Toolbar toolbar = requireActivity().findViewById(toolbarId);
         ((AppCompatActivity) requireActivity()).setSupportActionBar(toolbar);
+        /*if (navHostId==R.id.nav_host_basket){
+            navController = Navigation.findNavController(requireActivity(),navHostId);
+            Toast.makeText(getContext(), "Please do shopping", Toast.LENGTH_SHORT).show();
+        }else {
+            navController = Navigation.findNavController(requireActivity(), navHostId);
+        }*/
         navController = Navigation.findNavController(requireActivity(), navHostId);
         NavigationUI.setupWithNavController(toolbar, navController, appBarConfig);
     }

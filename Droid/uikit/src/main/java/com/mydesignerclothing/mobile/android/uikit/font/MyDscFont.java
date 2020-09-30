@@ -2,6 +2,7 @@ package com.mydesignerclothing.mobile.android.uikit.font;
 
 import android.content.Context;
 import android.graphics.Typeface;
+import android.os.Build;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.Spanned;
@@ -64,8 +65,11 @@ public class MyDscFont {
     if (end == start || start < 0 || end < 0) {
       return spannableString;
     }
+
     Typeface typeface = ResourcesCompat.getFont(context, fontResource);
-    spannableString.setSpan(new TypefaceSpan(typeface), start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+      spannableString.setSpan(new TypefaceSpan(typeface), start, end, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+    }
     return spannableString;
   }
 }

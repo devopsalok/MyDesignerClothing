@@ -2,6 +2,7 @@ package com.mydesignerclothing.mobile.android.create;
 
 import android.os.Bundle;
 import android.text.Html;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -118,9 +119,11 @@ public class ProductDetailFragment extends Fragment implements CreateInfoView, C
 
     @Override
     public void onSizeDialogConfirmButtonClicked() {
+   //     Log.e("size",""+productColorsList.toString());
         if (createDialogFragment != null) {
             createDialogFragment.dismiss();
         }
+       // Log.e("OPTION NAME", "" + productColorsList.getOptionName());
         fragmentProductDetailBinding.sizeBtn.setText(String.format("Size - %s", productColorsList.getOptionName()));
     }
 
@@ -188,6 +191,11 @@ public class ProductDetailFragment extends Fragment implements CreateInfoView, C
         Bundle bundle = new Bundle();
         bundle.putString("IMAGE_URL", productDetailImagesList.get(selectedItemIndex).getImageUrl());
         findNavController(requireView()).navigate(R.id.action_start_design, bundle);
+    }
+
+    @Override
+    public void addToCart() {
+
     }
 
     private void renderProductDetailByProductId() {

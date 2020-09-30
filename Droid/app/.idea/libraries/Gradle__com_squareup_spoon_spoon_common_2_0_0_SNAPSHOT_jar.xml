@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.squareup.spoon:spoon-common:2.0.0-SNAPSHOT@jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.spoon/spoon-common/2.0.0-SNAPSHOT/9827f36596e64cb1b839e88a7937356ce10b353/spoon-common-2.0.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.spoon/spoon-common/2.0.0-SNAPSHOT/5e7c4fc1809d6955f317be771221986fc4fb1e26/spoon-common-2.0.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.spoon/spoon-common/2.0.0-SNAPSHOT/cfe4a8b67309160dd1874aaa5f82f734cb343782/spoon-common-2.0.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

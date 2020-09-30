@@ -3,6 +3,7 @@ package com.mydesignerclothing.mobile.android.navigation;
 
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.mydesignerclothing.mobile.android.BaseFragment;
@@ -10,6 +11,7 @@ import com.mydesignerclothing.mobile.android.R;
 import com.mydesignerclothing.mobile.android.databinding.ActivityNavigationBinding;
 import com.mydesignerclothing.mobile.android.navigation.adapter.ViewPagerAdapter;
 import com.mydesignerclothing.mobile.android.uikit.BaseActivity;
+import com.mydesignerclothing.mobile.android.util.Utility;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -50,6 +52,7 @@ public class NavigationActivity extends AppCompatActivity implements ViewPager.O
         integerLinkedHashMap.put(R.id.create, 2);
         integerLinkedHashMap.put(R.id.basket, 3);
         integerLinkedHashMap.put(R.id.about, 4);
+
 
         activityNavigationBinding.mainPager.addOnPageChangeListener(this);
         activityNavigationBinding.mainPager.setAdapter(new MyDesignerClothingPagerAdapter(getSupportFragmentManager()));
@@ -118,6 +121,12 @@ public class NavigationActivity extends AppCompatActivity implements ViewPager.O
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int position = integerLinkedHashMap.get(item.getItemId());
         if (activityNavigationBinding.mainPager.getCurrentItem() != position) {
+            if(position==3){
+              //  Toast.makeText(this, "YOU CLICKED ON BASKET...", Toast.LENGTH_SHORT).show();
+                Utility.alertDialog(this,"Please come from shopping or after creating design.",null);
+                return true;
+            }
+
             setItem(position);
         }
         return true;

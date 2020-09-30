@@ -54,5 +54,9 @@
 
     <string name="save">Save</string>
     <string name="clear_all">Clear All</string>
+    <string name="addtocart">Add to Cart</string>
+    <string name="totalamoaunt">Total Amount</string>
+    <string name="continueshopping">Continue Shopping</string>
+    <string name="checkout">Checkout</string>
 
 </resources>

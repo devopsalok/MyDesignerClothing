@@ -83,7 +83,7 @@ public class ProductFragment extends Fragment implements ShopInfoView {
     @Override
     public void onProductsSuccessResponse(ProductsResponseModel productsResponseModel) {
         this.productsResponseModel = productsResponseModel;
-        productListAdapter = new ProductListAdapter(productsResponseModel.getProductsListModel());
+        productListAdapter = new ProductListAdapter(getActivity(),productsResponseModel.getProductsListModel());
         fragmentProductBinding.shopProductRecyclerView.setAdapter(productListAdapter);
     }
 

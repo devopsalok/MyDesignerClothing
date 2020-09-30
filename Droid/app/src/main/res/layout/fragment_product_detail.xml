@@ -3,18 +3,64 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <data>
-        <variable
-            name="createFragmentListener"
-            type="com.mydesignerclothing.mobile.android.create.view.CreateInfoView" />
-    </data>
-
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="?attr/actionBarSize"
-        android:layout_marginBottom="?attr/actionBarSize">
+        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_marginTop="?attr/actionBarSize">
+
+        <FrameLayout
+            android:id="@+id/bottom_sheet_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <ImageView
+                    android:visibility="gone"
+                    android:id="@+id/imageview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_launcher_background"/>
+
+                <Button
+                    android:id="@+id/start_design_btn"
+                    style="?attr/buttonSecondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/inset_small"
+                    android:layout_marginRight="@dimen/inset_small"
+                    android:fadeScrollbars="false"
+                    android:onClick="@{(view) -> createFragmentListener.onStartDesignButtonClicked()}"
+                    android:overScrollMode="ifContentScrolls"
+                    android:scrollbars="vertical"
+                    android:text="@string/start_design"
+                    android:textAllCaps="false" />
+
+                <Button
+                    android:id="@+id/add_to_cart"
+
+                    style="?attr/buttonSecondary"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="@dimen/inset_small"
+                    android:layout_marginRight="@dimen/inset_small"
+                    android:fadeScrollbars="false"
+                    android:onClick="@{(view) -> createFragmentListener.addToCart()}"
+                    android:overScrollMode="ifContentScrolls"
+                    android:scrollbars="vertical"
+                    android:text="@string/addtocart"
+                    android:textAllCaps="false"
+                    android:visibility="gone"/>
+            </LinearLayout>
+        </FrameLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -26,9 +72,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="@dimen/inset_large"
+                app:layout_constrainedHeight="true"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constrainedHeight="true">
+                app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/product_detail_container"
@@ -54,8 +100,8 @@
                             android:layout_marginLeft="@dimen/inset_small"
                             android:layout_marginRight="@dimen/inset_small"
                             android:layout_weight="1"
-                            android:text="@string/size"
                             android:onClick="@{(view) -> createFragmentListener.onSelectSizeButtonClicked()}"
+                            android:text="@string/size"
                             android:textAllCaps="false"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintLeft_toLeftOf="parent"
@@ -69,8 +115,8 @@
                             android:layout_marginLeft="@dimen/inset_small"
                             android:layout_marginRight="@dimen/inset_small"
                             android:layout_weight="1"
-                            android:text="@string/color"
                             android:onClick="@{(view) -> createFragmentListener.onSelectColorButtonClicked()}"
+                            android:text="@string/color"
                             android:textAllCaps="false"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintLeft_toLeftOf="parent"
@@ -156,28 +202,12 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <FrameLayout
-            android:id="@+id/bottom_sheet_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-            <Button
-                android:id="@+id/start_design_btn"
-                style="?attr/buttonSecondary"
-                android:layout_width="match_parent"
-                android:layout_height="60dp"
-                android:layout_gravity="bottom"
-                android:layout_marginLeft="@dimen/inset_small"
-                android:layout_marginRight="@dimen/inset_small"
-                android:fadeScrollbars="false"
-                android:onClick="@{(view) -> createFragmentListener.onStartDesignButtonClicked()}"
-                android:overScrollMode="ifContentScrolls"
-                android:scrollbars="vertical"
-                android:text="@string/start_design"
-                android:textAllCaps="false" />
-        </FrameLayout>
-
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <data>
+
+        <variable
+            name="createFragmentListener"
+            type="com.mydesignerclothing.mobile.android.create.view.CreateInfoView" />
+    </data>
 </layout>

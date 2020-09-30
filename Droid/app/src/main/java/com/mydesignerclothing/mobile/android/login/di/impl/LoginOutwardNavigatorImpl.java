@@ -3,6 +3,7 @@ package com.mydesignerclothing.mobile.android.login.di.impl;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.widget.Toast;
 
 import com.mydesignerclothing.mobile.android.navigation.NavigationActivity;
 import com.mydesignerclothing.mobile.android.login.di.contract.LoginOutwardNavigator;
@@ -30,6 +31,7 @@ public class LoginOutwardNavigatorImpl implements LoginOutwardNavigator {
 
     @Override
     public void onLoginSuccess(Context context) {
+
         navigateToNavigationDrawer(context, true);
     }
 

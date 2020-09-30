@@ -9,9 +9,11 @@ import dagger.android.DispatchingAndroidInjector;
 import dagger.android.HasAndroidInjector;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.mydesignerclothing.mobile.android.login.R;
+import com.mydesignerclothing.mobile.android.login.constants.Constant;
 import com.mydesignerclothing.mobile.android.login.databinding.ActivitySecondLoginBinding;
 import com.mydesignerclothing.mobile.android.login.di.contract.LoginOutwardNavigator;
 import com.mydesignerclothing.mobile.android.login.loginmain.presenter.LoginMainInfoPresenter;
@@ -59,6 +61,7 @@ public class SecondLoginActivity extends BaseActivity implements HasAndroidInjec
 
     @Override
     public void onLoginButtonClicked() {
+      //  Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show();
         if (loginMainViewModel.validateUserDetails()) {
             loginMainViewModel.setUserLoginDetails();
             loginMainInfoPresenter.loginUser(loginMainViewModel);
@@ -82,7 +85,12 @@ public class SecondLoginActivity extends BaseActivity implements HasAndroidInjec
 
     @Override
     public void onLoginSuccessResponse(LoginResponseModel loginResponseModel) {
-        loginOutwardNavigator.onLoginSuccess(this);
+        if (loginResponseModel.getStatus().equals("success")){
+            Log.e("logindata",""+loginResponseModel.getLoginResponseResult().get(0).getUserid());
+            Constant.USERID=loginResponseModel.getLoginResponseResult().get(0).getUserid();
+            loginOutwardNavigator.onLoginSuccess(this);
+        }
+
     }
 
     @Override

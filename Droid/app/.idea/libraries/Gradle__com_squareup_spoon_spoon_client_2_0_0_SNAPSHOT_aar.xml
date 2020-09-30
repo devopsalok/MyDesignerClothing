@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: com.squareup.spoon:spoon-client:2.0.0-SNAPSHOT@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/da534f738a2de41c5cc8614abfd983ef/jetified-spoon-client-2.0.0-SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/da534f738a2de41c5cc8614abfd983ef/jetified-spoon-client-2.0.0-SNAPSHOT/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.spoon/spoon-client/2.0.0-SNAPSHOT/17040db5f4a82e18e91cfd1d02bf0178a773a677/spoon-client-2.0.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.spoon/spoon-client/2.0.0-SNAPSHOT/2889f2efd36c5c0ad9731db7c01ab97f0163db18/spoon-client-2.0.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

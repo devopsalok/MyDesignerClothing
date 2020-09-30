@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.dynatrace.agent:agent-android:7.1.5.2263@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bf40f19ad87517f97a68a36aac740fc1/jetified-agent-android-7.1.5.2263/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bf40f19ad87517f97a68a36aac740fc1/jetified-agent-android-7.1.5.2263/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

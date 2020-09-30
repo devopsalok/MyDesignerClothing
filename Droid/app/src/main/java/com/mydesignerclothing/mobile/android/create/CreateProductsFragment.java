@@ -135,6 +135,11 @@ public class CreateProductsFragment extends Fragment implements CreateInfoView, 
 
     }
 
+    @Override
+    public void addToCart() {
+
+    }
+
     private void renderProductsForCategoryId() {
         fragmentProductBinding.shopProductRecyclerView.setLayoutManager(new LinearLayoutManager(requireContext()));
         fragmentProductBinding.shopProductRecyclerView.setLayoutManager(new GridLayoutManager(requireContext(), 3));
@@ -152,6 +157,7 @@ public class CreateProductsFragment extends Fragment implements CreateInfoView, 
     public void invokeProductDetailEvent(String productId) {
         Bundle bundle = new Bundle();
         bundle.putString("PRODUCT_ID", productId);
+        bundle.putString("from","create");
         findNavController(requireView()).navigate(R.id.action_product_detail_item, bundle);
     }
 

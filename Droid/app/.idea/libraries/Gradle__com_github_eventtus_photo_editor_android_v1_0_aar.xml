@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.eventtus:photo-editor-android:v1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8af282630b0a3761d714128330208d26/jetified-photo-editor-android-v1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8af282630b0a3761d714128330208d26/jetified-photo-editor-android-v1.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

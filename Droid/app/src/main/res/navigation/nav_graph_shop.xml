@@ -14,9 +14,37 @@
             android:id="@+id/action_shop_item"
             app:destination="@id/shop_products_dest" />
     </fragment>
+
+
     <fragment
         android:id="@+id/shop_products_dest"
         android:name="com.mydesignerclothing.mobile.android.shop.ProductFragment"
-        app:popUpTo="@+id/shop_dest"
-        android:label="@string/menu_shop" />
+        android:label="@string/menu_shop"
+        app:popUpTo="@+id/shop_dest">
+    <action
+        android:id="@+id/action_product_detail_item"
+        app:destination="@id/create_products_detail_dest" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/create_products_detail_dest"
+        android:name="com.mydesignerclothing.mobile.android.shop.ProductDetailFragment"
+
+        android:label="@string/menu_shop">
+        <action
+            android:id="@+id/action_start_design"
+            app:destination="@id/start_designcart" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/start_designcart"
+        android:name="com.mydesignerclothing.mobile.android.basket.BasketFragment"
+        android:label="@string/menu_basket">
+        <action
+            android:id="@+id/mybasket"
+            app:destination="@id/start_design"/>
+    </fragment>
+
+
 </navigation>

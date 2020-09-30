@@ -42,6 +42,8 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:support-v4:28.0.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:2.0.1'
     debugImplementation("com.github.jainsahab:Snooper-Okhttp:$versions.devTools.snooperVersion@aar") {
         transitive = true
         exclude group: 'com.squareup.okhttp3'
@@ -59,7 +61,19 @@ dependencies {
     implementation "android.arch.navigation:navigation-ui:$versions.androidX.navigation"
     implementation "com.github.eventtus:photo-editor-android:v1.0"
     implementation 'fr.avianey.com.viewpagerindicator:library:2.4.1@aar'
-    compile 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.nineoldandroids:library:2.4.0'
+
+
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.6.0'
+
+    //chuck
+    debugImplementation "com.github.chuckerteam.chucker:library:3.2.0"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.2.0"
+// Glide
+    implementation "com.github.bumptech.glide:glide:4.10.0"
+    annotationProcessor "com.github.bumptech.glide:compiler:4.10.0"
 
     implementation('org.springframework.android:spring-android-auth:1.0.1.RELEASE') {
         exclude module: 'spring-core'
