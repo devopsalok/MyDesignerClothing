@@ -375,7 +375,7 @@ public class ProductDetailFragment extends Fragment implements CreateInfoView, C
                             // Utility.hideLoadingDialog();
                             hideProgressDialog();
                             // Utility.showLog("Response", "Response : " + response.body());
-//                            Log.e("RESPONSE","Response data: " + response.body().toString());
+                          Log.e("RESPONSE","Response data: " + response.body().toString());
                             if (response.isSuccessful()) {
                                 try {
                                     JSONObject jsonObject = new JSONObject(response.body().toString());
