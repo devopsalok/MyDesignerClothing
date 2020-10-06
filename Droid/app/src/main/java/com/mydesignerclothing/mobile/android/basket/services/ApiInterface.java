@@ -18,12 +18,10 @@ import retrofit2.http.Part;
 import retrofit2.http.Query;
 
 public interface ApiInterface {
-    @Multipart
+/*    @Multipart
     @POST(APIEndPoints.ADDTOCART)
-    @Headers({
-            "Content-Type: multipart/form-data",
-            "Accept: application/json"
-    })
+    @Headers(
+            "Content-Type:application/x-www-form-urlencoded")
 
     Call<JsonElement> getAddtocart(@Part("productId") RequestBody productid,
                                    @Part("userId") RequestBody userId,
@@ -31,9 +29,19 @@ public interface ApiInterface {
                                    @Part MultipartBody.Part file
 
 
+    );*/
+@FormUrlEncoded
+    @POST(APIEndPoints.ADDTOCART)
+    @Headers(
+            "Content-Type:application/x-www-form-urlencoded")
+
+    Call<JsonElement> getAddtocart(@Field("productId") String productid,
+                                   @Field("userId") String userId,
+                                   @Field("quantity") String quantity,
+                                   @Field ("file") String file
+
+
     );
-
-
 
 
     @FormUrlEncoded

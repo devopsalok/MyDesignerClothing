@@ -16,7 +16,7 @@
         tools:ignore="LockedOrientationActivity"
         android:networkSecurityConfig="@xml/network_security_config"
         tools:replace="android:allowBackup">
-        <activity android:name=".basket.FinalCheckoutFragment"></activity>
+
         <activity android:name=".basket.ShippingMethodActivity" />
         <activity android:name=".basket.CheckoutActivity" />
         <activity
@@ -50,6 +50,9 @@
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false" />
 
     </application>
     <uses-feature

@@ -29,6 +29,7 @@ import com.mydesignerclothing.mobile.android.basket.services.ApiInterface;
 import com.mydesignerclothing.mobile.android.basket.view.BasketInfoView;
 import com.mydesignerclothing.mobile.android.login.constants.Constant;
 import com.mydesignerclothing.mobile.android.login.loginmain.SecondLoginActivity;
+import com.mydesignerclothing.mobile.android.registration.RegistrationActivity;
 import com.mydesignerclothing.mobile.android.uikit.view.CustomProgress;
 
 import org.json.JSONException;
@@ -132,46 +133,60 @@ txtCheckout.setOnClickListener(this);
             case R.id.txtCheckout:
                 /*Intent checkout=new Intent(getActivity(),CheckoutActivity.class);
                 startActivity(checkout);*/
-                TextView txtLogin, txtGuestLogin;
-                final Dialog dialog = new Dialog(getActivity());
-                dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-                View view = LayoutInflater.from(getActivity()).inflate(R.layout.login_dialog, null);
-                txtLogin = (TextView) view.findViewById(R.id.txtLogin);
-                txtGuestLogin = (TextView) view.findViewById(R.id.txtGuestLogin);
+               if (Constant.USERID!=null){
+                   findNavController(requireView()).navigate(R.id.basket_checkout);
+               }else {
+                   TextView txtLogin,txtSignup, txtGuestLogin;
+                   final Dialog dialog = new Dialog(getActivity());
+                   dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+                   View view = LayoutInflater.from(getActivity()).inflate(R.layout.login_dialog, null);
+                   txtLogin = (TextView) view.findViewById(R.id.txtLogin);
+                   txtSignup=(TextView)view.findViewById(R.id.txtSignup);
+                   txtGuestLogin = (TextView) view.findViewById(R.id.txtGuestLogin);
 
-                //  dialog.getWindow().getAttributes().windowAnimations = R.style.AlertDialogCustom;
-                WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
-                Window window = dialog.getWindow();
-                lp.copyFrom(window.getAttributes());
-                lp.width = WindowManager.LayoutParams.MATCH_PARENT;
-                lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
+                   //  dialog.getWindow().getAttributes().windowAnimations = R.style.AlertDialogCustom;
+                   WindowManager.LayoutParams lp = new WindowManager.LayoutParams();
+                   Window window = dialog.getWindow();
+                   lp.copyFrom(window.getAttributes());
+                   lp.width = WindowManager.LayoutParams.MATCH_PARENT;
+                   lp.height = WindowManager.LayoutParams.WRAP_CONTENT;
 
-               // mTxtMessage.setText(message);
-                txtLogin.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        dialog.dismiss();
-                     Intent login=new Intent(getContext(), SecondLoginActivity.class);
-                     startActivity(login);
-                    }
-                });
+                   // mTxtMessage.setText(message);
+                   txtLogin.setOnClickListener(new View.OnClickListener() {
+                       @Override
+                       public void onClick(View v) {
+                           dialog.dismiss();
+                           Intent login=new Intent(getContext(), SecondLoginActivity.class);
+                           startActivity(login);
+                       }
+                   });
+                   txtSignup.setOnClickListener(new View.OnClickListener() {
+                       @Override
+                       public void onClick(View v) {
+                           dialog.dismiss();
+                           Intent login=new Intent(getContext(), RegistrationActivity.class);
+                           startActivity(login);
+                       }
+                   });
 
-                txtGuestLogin.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        dialog.dismiss();
-                        findNavController(requireView()).navigate(R.id.basket_checkout);
-                    }
-                });
+                   txtGuestLogin.setOnClickListener(new View.OnClickListener() {
+                       @Override
+                       public void onClick(View v) {
+                           dialog.dismiss();
+                           findNavController(requireView()).navigate(R.id.basket_checkout);
+                       }
+                   });
 
-                dialog.setContentView(v);
-                dialog.setCancelable(false);
+                   dialog.setContentView(v);
+                   dialog.setCancelable(false);
 
-                int width = (int) (getResources().getDisplayMetrics().widthPixels * 0.90);
-                int height = (int) (getResources().getDisplayMetrics().heightPixels * 0.30);
-                dialog.getWindow().setLayout(width, lp.height);
+                   int width = (int) (getResources().getDisplayMetrics().widthPixels * 0.90);
+                   int height = (int) (getResources().getDisplayMetrics().heightPixels * 0.30);
+                   dialog.getWindow().setLayout(width, lp.height);
 
-                dialog.show();
+                   dialog.show();
+               }
+
              //   findNavController(requireView()).navigate(R.id.basket_checkout);
 
                 break;

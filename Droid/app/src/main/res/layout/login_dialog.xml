@@ -68,7 +68,24 @@
                 android:layout_height="wrap_content"
                 android:text="OR"
                 android:layout_below="@+id/txtLogin"
-         android:gravity="center"/>
+         android:gravity="center"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/txtSignup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimaryDark"
+                android:layout_below="@+id/txtLogin"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="SIGN UP"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+               />
             <TextView
                 android:id="@+id/txtGuestLogin"
                 android:layout_width="match_parent"
@@ -76,7 +93,7 @@
                 android:layout_marginBottom="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@color/colorPrimaryDark"
-                android:layout_below="@+id/or"
+                android:layout_below="@+id/txtSignup"
 
                 android:gravity="center"
                 android:padding="10dp"

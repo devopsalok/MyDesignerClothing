@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.os.Environment;
 import android.os.StrictMode;
 import android.text.Html;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -332,7 +333,13 @@ public class ProductDetailFragment extends Fragment implements CreateInfoView, C
         ApiInterface apiInterface = ApiClient.getClient().create(ApiInterface.class);
         //   File file = new File(productDetailImagesList.get(selectedItemIndex).getImageUrl());
         if (bitmap != null) {
-            File file = getFile(bitmap);
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+            byte[] byteArray = byteArrayOutputStream .toByteArray();
+            String encoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
+
+
+           // File file = getFile(bitmap);
 
           /*  MultipartBody.Part body = MultipartBody.Part.createFormData(
                     "file",
@@ -346,7 +353,7 @@ public class ProductDetailFragment extends Fragment implements CreateInfoView, C
             RequestBody quantity=RequestBody.create(okhttp3.MultipartBody.FORM,"1");*/
 
 
-
+/*
             //pass it like this
 
             RequestBody requestFile =
@@ -364,9 +371,9 @@ public class ProductDetailFragment extends Fragment implements CreateInfoView, C
                     RequestBody.create(MediaType.parse("multipart/form-data"), Constant.USERID);
 
             RequestBody quantity =
-                    RequestBody.create(MediaType.parse("multipart/text/plain"), "1");
-            apiInterface.getAddtocart(productid,userid,quantity,
-                    body
+                    RequestBody.create(MediaType.parse("multipart/text/plain"), "1");*/
+            apiInterface.getAddtocart(productId,Constant.USERID,"1",encoded
+
             )
                     .enqueue(new Callback<JsonElement>()
                     {
@@ -375,7 +382,7 @@ public class ProductDetailFragment extends Fragment implements CreateInfoView, C
                             // Utility.hideLoadingDialog();
                             hideProgressDialog();
                             // Utility.showLog("Response", "Response : " + response.body());
-                          Log.e("RESPONSE","Response data: " + response.body().toString());
+                    //      Log.e("RESPONSE","Response data: " + response.body().toString());
                             if (response.isSuccessful()) {
                                 try {
                                     JSONObject jsonObject = new JSONObject(response.body().toString());
